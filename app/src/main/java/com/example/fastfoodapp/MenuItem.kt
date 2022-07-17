@@ -3,11 +3,12 @@ package ProjectWithDesignPatterns
 // MenuItem will be the Component interface for the Composition of ComboMeals and Burgers
 interface MenuItem {
     abstract val name: String
+    abstract val cost: Int
     fun displayNode()
 }
 
 // ComboMeal is a complex node that can contain other ComboMeals or Burgers all of which are stored as children
-class ComboMeal(override  val name: String): MenuItem {
+class ComboMeal(override  val name: String, override val cost: Int): MenuItem {
     private var children: MutableList<MenuItem> = ArrayList<MenuItem>()
 
     fun add(child: MenuItem) {
@@ -36,7 +37,7 @@ class ComboMeal(override  val name: String): MenuItem {
 }
 
 // Burger is a leaf node that contains an array of Ingredients
-class Burger(override val name: String): MenuItem {
+class Burger(override val name: String, override val cost: Int): MenuItem {
     var ingredients: MutableList<Ingredient> = ArrayList<Ingredient>()
 
     // add ingredient, remove ingredient
