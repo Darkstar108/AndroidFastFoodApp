@@ -51,7 +51,8 @@ interface MenuItem {
 class Burger(
     override val name: String,
     override val basePrice: Int,
-    override val desc: String
+    override val desc: String,
+    override val image: String
     ): MenuItem, Visitible {
 
     override var currentPrice: Int = basePrice
@@ -94,7 +95,8 @@ class Burger(
 class Pizza(
     override val name: String,
     override val basePrice: Int,
-    override val desc: String
+    override val desc: String,
+    override val image: String
     ): MenuItem, Visitible {
 
     override var currentPrice: Int = basePrice

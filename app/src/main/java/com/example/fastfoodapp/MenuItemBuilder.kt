@@ -16,15 +16,15 @@ abstract class MenuItemBuilder {
 //}
 
 class BurgerBuilder: MenuItemBuilder() {
-    fun createBurger(burgerName: String, burgerBasePrice: Int, burgerDesc: String): Burger {
-        val burger = Burger(burgerName, burgerBasePrice, burgerDesc)
+    fun createBurger(burgerName: String, burgerBasePrice: Int, burgerDesc: String, burgerImage: String): Burger {
+        val burger = Burger(burgerName, burgerBasePrice, burgerDesc, burgerImage)
         return burger
     }
 }
 
 class PizzaBuilder: MenuItemBuilder() {
-    fun createBurger(pizzaName: String, pizzaBasePrice: Int, pizzaDesc: String): Pizza {
-        val pizza = Pizza(pizzaName, pizzaBasePrice, pizzaDesc)
+    fun createBurger(pizzaName: String, pizzaBasePrice: Int, pizzaDesc: String, pizzaImage: String): Pizza {
+        val pizza = Pizza(pizzaName, pizzaBasePrice, pizzaDesc, pizzaImage)
         return pizza
     }
 }
