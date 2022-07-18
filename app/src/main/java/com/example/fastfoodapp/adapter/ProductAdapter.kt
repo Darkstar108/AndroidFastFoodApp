@@ -1,20 +1,17 @@
 package com.example.fastfoodapp.adapter
 
-import ProjectWithDesignPatterns.MenuItem
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.view.menu.MenuView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fastfoodapp.MenuItem
 import com.example.fastfoodapp.R
-import com.example.fastfoodapp.activities.ProductActivity
+import com.example.fastfoodapp.activities.IngredientActivity
 import com.example.fastfoodapp.activities.SplashScreenActivity
 import com.squareup.picasso.Picasso
 
@@ -40,7 +37,7 @@ class ProductAdapter(private var products: Array<MenuItem>) : RecyclerView.Adapt
                 var b: Bundle = Bundle();
                 b.putString("product",pName.toString())
 
-                val productIntent = Intent(itemView.context, SplashScreenActivity::class.java)
+                val productIntent = Intent(itemView.context, IngredientActivity::class.java)
                 productIntent.putExtras(b)
                 itemView.context.startActivity(productIntent)
 
@@ -65,7 +62,7 @@ class ProductAdapter(private var products: Array<MenuItem>) : RecyclerView.Adapt
         holder.apply {
             pName.text = products[position].name
             pDescription.text = products[position].desc
-            pPrice.text = products[position].cost.toString()
+            pPrice.text = products[position].currentPrice.toString()
             Picasso.with(itemView.context).load(products[position].image).into(pImage)
         }
 
