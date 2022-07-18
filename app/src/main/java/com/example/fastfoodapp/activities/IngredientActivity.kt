@@ -1,13 +1,12 @@
 package com.example.fastfoodapp.activities
 
-import ProjectWithDesignPatterns.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.fastfoodapp.R
+import com.example.fastfoodapp.*
 import com.example.fastfoodapp.adapter.IngredientsAdapter
 import com.example.fastfoodapp.adapter.ProductAdapter
 
@@ -18,7 +17,8 @@ class IngredientActivity : AppCompatActivity() {
 
         var recyclerView = findViewById<RecyclerView>(R.id.recyclerView2) as RecyclerView
 
-        val ingredientMap: Map<String,Array<Ingredient>> = mutableMapOf("Burger" to arrayOf(Cheese(),Tomato(),Lettuce(),Chicken())
+        val ingredientMap: Map<String,Array<Ingredient>> = mutableMapOf("Burger" to arrayOf(Cheese(),
+            Tomato(), Lettuce(),Chicken())
             ,"Pizza" to arrayOf(Cheese(), Tomato(),Lettuce(),Chicken())
         )
 
