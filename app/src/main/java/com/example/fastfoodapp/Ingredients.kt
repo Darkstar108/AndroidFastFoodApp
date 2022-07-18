@@ -21,7 +21,7 @@ class Cheese: Ingredient {
 class Tomato: Ingredient {
     override val name: String = "Tomato"
     override val cost: Int = 10
-    override val image: String = "https://img.icons8.com/emoji/256/cheese-wedge-emoji.png"
+    override val image: String = "https://toppng.com/uploads/preview/tomatoes-115283199337vom9vwv5p.png"
 
 }
 
