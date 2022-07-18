@@ -24,15 +24,15 @@ class RemoveIngredientCommand(override val menuItem: Burger, val remIngredient: 
         }
     }
 }
-
-class AddMenuItemCommand(override val menuItem: ComboMeal, val addedItem: MenuItem): Command {
-    override fun execute() {
-        menuItem.add(addedItem)
-    }
-}
-
-class RemoveMenuItemCommand(override val menuItem: ComboMeal, val removeItemName: String): Command {
-    override fun execute() {
-        menuItem.getChildren().removeIf { it.name == removeItemName }
-    }
-}
+//
+//class AddMenuItemCommand(override val menuItem: ComboMeal, val addedItem: MenuItem): Command {
+//    override fun execute() {
+//        menuItem.add(addedItem)
+//    }
+//}
+//
+//class RemoveMenuItemCommand(override val menuItem: ComboMeal, val removeItemName: String): Command {
+//    override fun execute() {
+//        menuItem.getChildren().removeIf { it.name == removeItemName }
+//    }
+//}
