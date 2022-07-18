@@ -1,4 +1,4 @@
-package ProjectWithDesignPatterns
+package com.example.fastfoodapp
 
 // Defines Ingredient interface that will be implemented by some concrete Ingredients
 interface Ingredient {
