@@ -8,6 +8,7 @@ interface MenuItem {
     abstract val basePrice: Int
     abstract var currentPrice: Int
     abstract val desc: String
+    abstract val image: String
     fun displayNode()
 }
 

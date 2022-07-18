@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fastfoodapp">
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -14,10 +16,10 @@
         android:theme="@style/Theme.FastFoodApp"
         tools:targetApi="31">
         <activity
-            android:name=".IngredientActivity"
+            android:name=".activities.IngredientActivity"
             android:exported="false" />
         <activity
-            android:name=".CartActivity"
+            android:name=".activities.CartActivity"
             android:exported="false" />
         <activity
             android:name=".activities.SplashScreenActivity"
