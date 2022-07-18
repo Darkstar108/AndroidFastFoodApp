@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fastfoodapp.R
+import com.example.fastfoodapp.activities.IngredientActivity
 import com.example.fastfoodapp.activities.SplashScreenActivity
 import com.squareup.picasso.Picasso
 
@@ -36,7 +37,7 @@ class ProductAdapter(private var products: Array<MenuItem>) : RecyclerView.Adapt
                 var b: Bundle = Bundle();
                 b.putString("product",pName.toString())
 
-                val productIntent = Intent(itemView.context, SplashScreenActivity::class.java)
+                val productIntent = Intent(itemView.context, IngredientActivity::class.java)
                 productIntent.putExtras(b)
                 itemView.context.startActivity(productIntent)
 
