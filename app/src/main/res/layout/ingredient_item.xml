@@ -19,7 +19,6 @@
             android:id="@+id/ingredient_image"
             android:layout_width="match_parent"
             android:layout_height="194dp"
-            android:contentDescription="Jalapeno Description Here"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/jalapeno" />
         <LinearLayout
