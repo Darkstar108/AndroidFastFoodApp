@@ -14,6 +14,7 @@ import com.example.fastfoodapp.adapter.ProductAdapter
 
 class IngredientActivity : AppCompatActivity() {
     var addToCart    : Button?   = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingredient)

@@ -23,7 +23,7 @@ class BurgerBuilder: MenuItemBuilder() {
 }
 
 class PizzaBuilder: MenuItemBuilder() {
-    fun createBurger(pizzaName: String, pizzaBasePrice: Int, pizzaDesc: String, pizzaImage: String): Pizza {
+    fun createPizza(pizzaName: String, pizzaBasePrice: Int, pizzaDesc: String, pizzaImage: String): Pizza {
         val pizza = Pizza(pizzaName, pizzaBasePrice, pizzaDesc, pizzaImage)
         return pizza
     }
