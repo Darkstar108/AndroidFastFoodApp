@@ -17,8 +17,6 @@ import com.squareup.picasso.Picasso
 
 class ProductAdapter(private var products: Array<MenuItem>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
-
-
     // he will take care of cache ..
     inner  class ViewHolder( itemView : View): RecyclerView.ViewHolder(itemView){
         // 11cf  inflated memory
@@ -32,10 +30,8 @@ class ProductAdapter(private var products: Array<MenuItem>) : RecyclerView.Adapt
 
             itemView.setOnClickListener {
                 v: View ->
-                val position:Int = adapterPosition
-                Toast.makeText(itemView.context,"You clicked on ${pName.toString()} position ${position + 1 }",Toast.LENGTH_SHORT).show()
                 var b: Bundle = Bundle();
-                b.putString("product",pName.toString())
+                b.putString("product",pName.text.toString())
 
                 val productIntent = Intent(itemView.context, IngredientActivity::class.java)
                 productIntent.putExtras(b)
@@ -62,7 +58,7 @@ class ProductAdapter(private var products: Array<MenuItem>) : RecyclerView.Adapt
         holder.apply {
             pName.text = products[position].name
             pDescription.text = products[position].desc
-            pPrice.text = products[position].currentPrice.toString()
+            pPrice.text = "Rs." + products[position].currentPrice.toString()
             Picasso.with(itemView.context).load(products[position].image).into(pImage)
         }
 
@@ -70,7 +66,7 @@ class ProductAdapter(private var products: Array<MenuItem>) : RecyclerView.Adapt
     }
 
     override fun getItemCount(): Int {
-        return   products.size
+        return products.size
     }
 
 }
