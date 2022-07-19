@@ -16,8 +16,6 @@ import com.squareup.picasso.Picasso
 
 class ProductAdapter(private var products: Array<MenuItem>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
-
-
     // he will take care of cache ..
     inner  class ViewHolder( itemView : View): RecyclerView.ViewHolder(itemView){
         // 11cf  inflated memory
@@ -69,7 +67,7 @@ class ProductAdapter(private var products: Array<MenuItem>) : RecyclerView.Adapt
     }
 
     override fun getItemCount(): Int {
-        return   products.size
+        return products.size
     }
 
 }
